@@ -1,0 +1,75 @@
+:root{
+    --cor-de-fundo: hsl(218, 23%, 16%);
+    --cor-do-card: hsl(217, 19%, 24%);
+    --cor-do-icon: hsl(150, 100%, 66%);
+    --cor-da-letra: hsl(193, 38%, 86%);
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+}
+
+main{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor-do-card);
+    font-family: 'Manrope';
+    width: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.cartao h1{
+    font-size: 16px;
+    color: var(--cor-do-icon);
+    margin: 30px 0px 10px 0px;
+}
+
+.cartao p{
+    text-align: center;
+    font-size: 28px;
+    color: var(--cor-da-letra);
+    margin: 0px 20px;
+}
+
+.cartao .pattern{
+    margin: 20px 0px 50px 0;
+}
+
+.cartao .icon{
+    position: absolute;
+    bottom: -12%;
+    background-color: var(--cor-do-icon);
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+@media(max-width: 375px){
+    main{
+       width: 375px;
+       max-width: 100%;
+       margin-left: 10px;
+       margin-right: 10px;
+    }
+
+    .cartao{
+        width: 300px;
+    }
+
+    .cartao .icon{
+        bottom: -8%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
